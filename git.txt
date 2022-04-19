@@ -1,0 +1,45 @@
+
+创建SSH KEY
+ssh-keygen -t rsa -C "1091788500@qq.com"
+git  status
+git config --list
+git还原到之前某个版本，本地和远程都还原
+
+命令行操作：git reset 
+第一步: git log 查看之前的commit的id，找到想要还原的版本
+第二步: git reset --hard 44bd896bb726be3d3815f1f25d738a9cd402a477   还原到之前的某个版本
+第三步: git push -f origin master  强制push到远程
+
+
+Git 全局设置:
+git config --global user.name "张良"
+git config --global user.email "9384343+china_wuwei@user.noreply.gitee.com"
+创建 gitee仓库:
+上传
+git init 
+git add .
+git commit -m "first commit"
+git remote add origin https://gitee.com/china_wuwei/prj.git
+git push -u origin "master"
+
+
+已有仓库下载
+cd existing_git_repo
+git remote add origin https://gitee.com/china_wuwei/prj.git
+git pull origin "master"
+
+创建 github仓库:
+上传
+git init 
+git add .
+git commit -m "t commit"
+git remote add origin git@github.com:fish-eagle/myprj.git
+git push origin  "master"
+
+
+已有仓库下载
+cd  ..
+git remote add origin git@github.com:fish-eagle/myprj.git
+git pull origin "master"
+
+
